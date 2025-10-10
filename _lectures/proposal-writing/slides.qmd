@@ -1,0 +1,126 @@
+---
+author:
+  - name: Charles C. Lanfear
+title: Referencing and Reference Management
+subtitle: An Introduction to Zotero
+format:
+  revealjs:
+    theme: assets/ioc.scss
+    incremental: false
+    self-contained: false
+    width: 1200
+    height: 800
+    auto-stretch: true
+    title-slide-attributes:
+      data-background-image: img/ioc_entrance_narrow.jpg
+      data-background-position: bottom
+      data-background-size: contain
+filters: 
+  - assets/invert-h1.lua
+editor: source
+mouse-wheel: true
+history: false
+---
+
+
+
+
+# Referencing
+
+
+## Referencing {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+Handook stuff?
+
+Some personal opinions; when to:
+
+* Ref without comment
+* Ref with comment
+* Discuss at length
+* Quote
+
+## Styles {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+APA
+Harvard
+MHRA
+
+
+# Zotero
+
+## Zotero Demo {.dark-slide background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+## Getting Started {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+Visit [Zotero.org](https://www.zotero.org/)
+[Downloads](https://www.zotero.org/download/)
+* Desktop application
+* Zotero Connector
+* Optional [additional plugins](https://www.zotero.org/support/plugins)
+
+## Desktop Application {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+Store metadata on books, articles, book chapters, magazines, newspapers,
+podcasts, videos, reports, lectures, etc.
+● Create notes nested within certain entries (great for reading notes)
+● Tags
+● Sync your library and notes across multiple machines (you need an account)
+● Access your account through the Zotero website
+● Settings for metadata and syncing 
+
+## Zotero Connector {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+Once, the plugin is installed, you can easily add items to Zotero.
+● JStor
+● Google Scholar
+● Journal websites
+● Publisher websites
+● Amazon.com
+● ISBN numbers
+● (sometimes) Directly from a PDF
+● News articles 
+
+Adds a Zotero menu to Google Docs!
+
+## Style Repository {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+[Zotero Style Repository](https://www.zotero.org/styles)
+All the hits — Chicago, MLA, APA, etc. — and much, much more
+● Discipline styles
+● Journal-specific styles
+You can switch a style in “document preferences” (in the word processor)
+● Updates all in-text citations
+● And the bibliography!
+
+## Word Plugin {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+https://www.zotero.org/support/word_processor_plugin_usage
+
+## In-text modifications {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+You can make a lot of modifications within the word processor
+● Multiple items in single citation
+● Editing existing citations
+● Hiding authors
+● Adding page numbers, chapters, tables, figures
+● Adding text within the parentheses (e.g. “see also”)
+● “Refresh” to update modifications you make in the desktop app
+
+## Zotero versus alternatives {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+Comparison chart from UChicago library
+● Zotero is free
+● Allows you to easily pull data on items from your browser
+● Gives you access to thousand of styles
+● It works without an internet connection 
+
+## Conclusion {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+These are basics, but there’s more!
+● [Groups](https://www.zotero.org/groups/)
+● Exporting your library
+● Integration with Quarto
+   * Need to be in Visual mode!
+● [“Locate”](https://www.zotero.org/support/locate)
+● [More resources](https://www.zotero.org/support/)
+● “Upgrade” your storage to support Zotero

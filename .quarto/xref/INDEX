@@ -1,0 +1,50 @@
+{
+  "index.qmd": {
+    "index.html": "f6e94570"
+  },
+  "about.qmd": {
+    "about.html": "571a945b"
+  },
+  "posts/week-1/week-1.qmd": {
+    "week-1.html": "ec388fcf"
+  },
+  "posts/week-2/week-2.qmd": {
+    "week-2.html": "efb85b8e"
+  },
+  "posts/week-3/week-3.qmd": {
+    "week-3.html": "664be174"
+  },
+  "posts/week-4/week-4.qmd": {
+    "week-4.html": "7ab4294f"
+  },
+  "posts/week-5/week-5.qmd": {
+    "week-5.html": "48c987bd"
+  },
+  "posts/week-6/week-6.qmd": {
+    "week-6.html": "d88a1ad7"
+  },
+  "posts/week-7/week-7.qmd": {
+    "week-7.html": "9d798b2c"
+  },
+  "posts/week-8/week-8.qmd": {
+    "week-8.html": "bffc8a3e"
+  },
+  "posts/dissertation-writing/dissertation-writing.qmd": {
+    "dissertation-writing.html": "afc0e407"
+  },
+  "posts/essay-writing/essay-writing.qmd": {
+    "essay-writing.html": "f3091885"
+  },
+  "posts/ethics/ethics.qmd": {
+    "ethics.html": "0de78fe5"
+  },
+  "posts/presentations/presentations.qmd": {
+    "presentations.html": "b566f2d8"
+  },
+  "posts/proposal-writing/proposal-writing.qmd": {
+    "proposal-writing.html": "885940ed"
+  },
+  "posts/referencing/referencing.qmd": {
+    "referencing.html": "9a3ac19c"
+  }
+}
