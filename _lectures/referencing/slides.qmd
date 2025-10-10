@@ -32,12 +32,20 @@ history: false
 
 Handook stuff?
 
+Defining refs; what is purpose?
+
 Some personal opinions; when to:
 
 * Ref without comment
 * Ref with comment
 * Discuss at length
 * Quote
+
+Provide example of each from my own work
+
+## Examples
+
+A few bad examples, solicit how to fix
 
 ## Styles {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
 
