@@ -123,16 +123,8 @@ body strong {
  color: $color-accent-code;
 }
 
-.dark-slide {
- background-image: "img/logo-light.svg" !important;
-}
-
-.dark-slide {
-  background-color: $color-bg-code !important;
-}
 .dark-slide body {
   color: $color-text-code !important;
-  background-color: $color-bg-code !important;
 }
 .dark-slide h1,
 .dark-slide h2,
@@ -142,7 +134,6 @@ body strong {
 }
 .dark-slide p {
   color: $color-text-code !important;
-  background-color: $color-bg-code !important;
 }
 
 //

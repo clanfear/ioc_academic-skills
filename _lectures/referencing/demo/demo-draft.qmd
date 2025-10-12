@@ -1,0 +1,311 @@
+---
+title: "Life-course processes as cause and effect of trends in gun violence"
+author: 
+  - name: Charles C. Lanfear
+    email: cl948@cam.ac.uk
+    affiliation: University of Cambridge
+  - name: Robert J. Sampson
+    email: rsampson@wjh.harvard.edu
+    affiliation: Harvard University
+format:
+  docx:
+    reference-doc: assets/template_doc.docx
+editor: visual
+bibliography: references.bib
+csl: assets/apa.csl
+---
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(ggforce)
+library(showtext)
+library(janitor)
+library(flextable)
+library(ggtext)
+library(patchwork)
+library(ragg)
+
+knitr::opts_chunk$set(dev = "ragg_png",  
+                      message = FALSE,
+                      echo = FALSE,
+                      warning = FALSE,
+                      fig.showtext = TRUE,
+                      fig.align = "center")
+plot_font <- "Open Sans"
+font_add_google(name = plot_font)
+showtext_auto()
+gg_color_hue <- function(n) {
+  hues = seq(15, 375, length = n + 1)
+  hcl(h = hues, l = 65, c = 100)[1:n]
+}
+```
+
+# Abstract
+
+Cohorts are comprised of individuals that, as a result of being born in a particular range of time, all experience macro-scale historical contexts at a similar age. Life course and demographic research on crime and deviance often focuses on the micro-level (individual) outcomes of macro-scale (societal) causes such as mass incarceration and COVID-19. When societal (macro-scale) outcomes are considered, the focus is usually on aggregated individual outcomes such as rates of crime offending or mortality. Less often considered is how macro-level events affect crime-relevant social processes to produce emergent (i.e., not simply aggregated) macro-level outcomes. We present a tentative cohort micro-macro model of social change and use it to examine trends in concealed handgun carrying, legal cynicism, and gun violence in the US over the last 30 years.
+
+# Background
+
+US homicide rates changed dramatically over the last three decades, with a major peak in the early 1990s and recent surges in 2016 and, in particular, 2020–2021 (though they did not reach the 1990s peak). Over this period, the proportion of homicides committed using a firearm has increased from approximately 65% to 80% [@kaplan]. These patterns are more extreme in Chicago—and similar cities like Philadelphia and Dallas—where recent homicide peaks met or exceeded the early 1990s heights and the proportion of firearm homicides increased from 70% to over 90% [@kaplan]. Recent work shows exposure to gun violence in this period varied sharply by cohort, race, and sex [@lanfear2023]: adolescent exposure was high in the early 1990s, but low afterward, while adult exposure was low until 2016-2021. Black and Hispanic males were most at risk across the entire period.
+
+```{r fig-homicide-in-us, fig.width = 4, fig.height = 3, fig.align='center'}
+#| fig-cap: "Homicide rates, 1985-2021, overall and using a firearm"
+ 
+load("./data/cdc_mortality.RData")
+load("./data/chicago_rates_year.RData")
+
+cdc_mortality |>
+  filter(year >= 1985) |> mutate(location = "United States") |>
+  bind_rows(chicago_rates_year |>
+  filter(year >= 1985) |> mutate(location = "Chicago")) |>
+  mutate(location = fct_relevel(location, "United States")) |>
+  ggplot(aes(x = year, y = rate, group = type, linetype = type)) + 
+  geom_line(linewidth = 0.5) +
+  facet_wrap(~location, nrow = 2, scales = "free_y") +
+  scale_linetype_manual(values = c("All" = "dashed", "Firearm" = "solid")) +
+  geom_hline(yintercept = 0, color = "black", linewidth = 0.25) +
+  geom_text(data = ~ . |> 
+              filter(year == 1988) |> 
+              mutate(rate = case_when(
+               type == "All" & location == "United States" ~ 10,
+               type == "All" & location == "Chicago" ~ 30,
+               type == "Firearm" & location == "United States" ~ 4,
+               type == "Firearm" & location == "Chicago" ~ 11
+               )), 
+            size = 3,
+            aes(label = type), 
+            family = plot_font) +
+  labs(x = NULL, y = "Homicides per 100,000 population") +
+  theme_minimal(base_size = 10) +
+  theme(panel.grid = element_blank(),
+        text = element_text(family = plot_font),
+        legend.position = "none")
+
+```
+
+## Gun carrying and violence
+
+What drove these large swings in violence? We propose one proximal cause: variation in gun carrying over the life course in response to macrosocial change. Recent work shows age, period, and cohort variation in the timing and prevalance of onset of gun carrying [@lanfear2024], specifically: a) gun carrying increases rapidly in adolescence, particularly for black and Hispanic males; b) increases were much larger for those coming of age during the crime peak of the 1990s; c) carrying increased rapidly for everyone, regardless of age, race, or sex, in 2016—2021. This work also finds different drivers of carry by life stage: adolescents, but not adults, appear to start carrying following exposure to gun violence, while adults start carrying in periods of social upheaval. These age-specific dual pathways of gun carrying serve as a point of departure for our argument.
+
+We argue this age-graded life-course variation in gun carrying is a key mechanism producing aggregate rates of violence. One manifestation may be seen in the changing age distribution of handgun homicide, the predominant form of gun homicide [@lanfear2024; @kaplan]. As seen in Figure 2 taken from @lanfear2024, handgun homicide is increasingly committed by adults: In 1995, 36% of homicides were committed by offenders under 21 (i.e., adolescents), however, in 2021, only 21% of homicides were committed by adolescent offenders. These differences are also not attributable to changes in age composition over this time period (see appendix 1).\
+
+![Proportion of handgun homicide offenders by recorded age. Reprinted from Lanfear et al. [-@lanfear2024]. Data from Kaplan [-@kaplan]](img/sciadv-handgun-homicide.jpg){#fig-hom-offender fig-align="center"}
+
+## Two Periods
+
+The early 1990s and 2016—2021 were remarkably similar in levels of gun violence. However, they differ strikingly in the composition of offenders and underlying social context. On the one hand, early 1990s gun violence–both offending and victimization–was highly concentrated in adolescence and coincided with intersecting structural disadvantages including but not limited to de-industrialization and mass incarceration—factors highly concentrated both spatially and racially [@peterson2010]. The resulting concentration of disadvantage produced immediate dangerous contexts–characterized by gang conflicts and competitive drug markets [@blumstein1995], legal cynicism [@sampson1998; @kirk2011], and codes of violence [@anderson1999]–that drive adolescent gun carrying and violence [@lanfear2024; @spano2011]. On the other hand, increases in handgun carrying and violence in 2016--2021 were concentrated in adulthood and coincided with sudden but widespread macrosocial instability including the outbreak of COVID-19 and unrest over racialized police violence, all in the context of ever-relaxing concealed carry laws [@doucette2023]. These disruptions likely exacerbated the legal cynicism and sense of insecurity associated with (predominantly legal) adult gun carrying [@carlson2015; @wintemute2024; @keskintürk; @sampson2024]. One characteristic both periods share is stark heterogeneity in gun carrying and exposure to gun violence: both carry and exposure were concentrated among Black and Hispanic men [@lanfear2023].
+
+It is notable that these two periods of high homicide in the US have little parallel elsewhere in the world—whether considering all homicides or only gun homicides—despite similar macrosocial changes occurring in comparable countries. One characteristic distinguishing these countries from the United States is the nearly complete absence of handgun ownership, legal concealed carry, or a self-defense oriented gun culture [@yamane2022]. For example, the United Kingdom experienced similar deindustrialization and mass incarceration through the 1990s [@farrall2024] and COVID disruptions were just as severe and even aggravated by the economic disarray of Brexit. While overall crime increase in early the 1990s, no discernible increases in homicide occurred in either period [@officefornationalstatisticsa].[^1] Similarly, in Canada, despite high rates of gun ownership—but tight restrictions on handguns and concealed carry—homicide declined throughout the late 1980s and 1990s and increased modestly after 2019 but peaked in 2022 [@statisticscanada]; firearms were used in a minority of Canadian homicides, but where used, they were largely handguns as in the US [@statisticscanadaa]. In contrast, the Czech Republic, which permits concealed carry for defensive purposes also did not display a significant increase in homicide in 2020-2021; however, unlike the US, there were no significant increases in either gun purchasing or concealed carry permits in this period and overall rates of both violent crime and concealed carry were very low (\~3%) [@unodc2025; @policeoftheczechrepublic].
+
+[^1]: An apparent increase in 2016 results from the ruling that the 96 deaths of the 1989 Hillsborough event were unlawfully killings due to gross negligence [@conn2016]. A similar spike occurs in 2003 due to 173 murders committed over 30 years by Dr Harold Shipman being officially recorded in this year [@officefornationalstatistics].
+
+## Legal cynicism and gun carrying
+
+Cynicism about the criminal justice system plays a key role in cultural explanations of violence in neighborhoods suffering under concentrated disadvantage in the late 1980s through 1990s. As Anderson [-@anderson1999, p. 34] writes in his classic *Code of the Street*, "The inclination to violence springs from the circumstances of life… The code of the street is actually a cultural adaptation to a profound lack of faith in the police and the judicial system—and in others who would champion one's personal security." In this framework, concentrated disadvantage produces alienation from institutions of mainstream society under which norms of self-reliance and reciprocity emerge promoting the use of violence for solving grievances and achieving social status for young men lacking conventional opportunities. Similarly, Kirk & Papachristos [-@kirk2011, p. 1] implicate *legal cynicism*, "a cultural frame in which people perceive the law as illegitimate, unresponsive, and ill equipped to ensure public safety," as a cause of persistent neighborhood violence in the 1990s, because when calling the police is not perceived as a viable option, individuals may instead solve interpersonal conflicts through violence. Both Anderson [-@anderson1999] and Kirk & Papachristos [-@kirk2011] argue that legal cynicism is a response to spatially concentrated disadvantage and negative interactions between local community members and the police. While guns play an important role in Anderson's [-@anderson1999] explanation—they deter threats, confer status, and facilitate dominating others—this role is only implied by Kirk & Papachristos \[[-@kirk2011]; though see also @sierra-arévalo2016\], as their focal outcome is homicides, which are primarily committed using handguns [@kaplan].
+
+While these theories set out to explain persistent community violence resulting from concentrated disadvantage, their key elements are echoed in Carlson's [-@carlson2015] explanation of legal adult gun carrying which is untethered from concentrated disadvantage and neighborhoods altogether. Carlson [-@carlson2015] argues that legal gun carrying is driven by two sets of racially differentiated beliefs: the first, shared among all carriers, that police are incapable of providing protection (i.e., ineffective), and the second, shared mainly among non-white carriers, that police are coercive violators of rights (i.e., illegitimate). Rather than rooted in local concentrated disadvantage, Carlson [-@carlson2015] links these perceptions to generalized social and economic insecurity. While carrying a gun first and foremost provides a sense of security from diffuse but ever-present threats—often imagined as an inner-city Black youth carrying an illegal gun—it secondarily serves as (at least symbolic) resistance to oppressive policing, and, like Anderson, a means to preserve masculine status as conventional economic opportunities decline.
+
+## Distrust and insecurity
+
+Where legal cynicism reflects expectations about police---e.g., will they resolve a dangerous situation or make it worse---generalized trust reflects expectations about the behavior of strangers---e.g, can they be relied to look out for you when you are vulnerable or will they try to take advantage? Writing at the same time as Anderson, @putnam2000 noted a continuous decline in generalized trust in the US from the 1970s through mid-1990s [see also @paxton1999]. Some evidence suggest generalized trust in the US stabilized after the mid-1990s and until 2018 [@hooghe2017; @mewes2021]. More recently, however, @sampson2026 shows that the decline may have resumed amidst the instability of 2020-2021: as seen in Figure @fig-sampson-trust-cropped, the difference in trust of neighbors between young adults in 2021 and those similarly-aged in 2012 is as large as the decline in trust in police over the same period. This is unsurprising as generalized trust is positively related to confidence in political institutions [@robbins2012; @mewes2021], and negatively associated with political partisanship [@hooghe2017] and economic disruptions such as unemployment [@mewes2021]. Together, these trends point toward a growing sense of insecurity and suspicion toward others in the social environment fueled by political polarization, loss of faith in institutions, and economic and social disruption.
+
+Distrust and insecurity are implicated as a motivators for gun ownership and conditional acceptance of violence. Stroebe et al. [-@stroebe2017, p. 1079] find protective gun ownership is primarily driven by “the belief that the world is a dangerous and unstable place, populated by bad people, and that society is at the brink of collapse.” Wintemute et al.'s [-@wintemute2024] findings that regular gun carriers---as compared to other gun owners---are more likely to believe a civil war is imminent and that is justified in response to support police, resist an oppressive government, and defend the “American Way of Life”; that is, to defend against threats to stability and security [see also @carlson2023]. Such insecurity and distrust---whether directed at proximate others or more generalized and diffuse---may be a precondition for the emergence of legal cynicism, but it also likely exerts direct effects on situational behavior. Low trust, for instance, may increase the likelihood of interpreting others’ actions as intentional and offensive, a key antecedent of interpersonal conflict and homicide [@luckenbill1977; @ludwig2025]. Importantly, race and gender shape who is seen as untrustworthy or threatening: in Carlson’s [@carlson2015] ethnography, white gun carriers imagined a young Black man with an illegally carried gun — the archetypal “criminalblackman” [@russell-brown1998]— as the primary object of their fear, against whom a legally carried firearm provided symbolic and practical defense.
+
+::: {#fig-sampson-trust-cropped}
+![](img/sampson-trust-cropped.png)
+
+Trust in police and neighbors at age twenty-five diverges by cohort. "Despite having much higher arrest rates, the cohort born in 1987 has greater levels of trust in police and neighbors at age twenty-five than counterparts born just nine years later, adjusting for background factors and early-life conditions," [@sampson2026]
+:::
+
+## Cynicism, distrust, and guns
+
+We synthesize these threads to argue that legal cynicism promotes concealed gun carrying as a response to perceived insecurity. As in Kirk and Papachristos [-@kirk2011], we conceive of legal cynicism as a frame affecting how individuals perceive and interpret situations (i.e., seeing gun carry as a proper response to insecurity), but we depart from their explanation by arguing that it need not originate in negative interactions with the criminal justice system in the neighborhood where one lives—that it need not be ecological at all. Rather, legal cynicism may also be produced by broader societal changes in perceptions of the ability of police and institutions to ensure safety and security. Similarly, perceived insecurity may result from local dangers such as exposure to gun violence but may also result from diffuse threats and generalized distrust, such as perceptions of the world being a dangerous place [@stroebe2017]. Put differently, we argue that legal cynicism in the 1990s was primarily a neighborhood phenomenon because the factors producing it were local to neighborhoods; in contrast, much of the legal cynicism of the mid-2010s onward is rooted in macrosocial changes—most prominently the instability resulting from the COVID-19 pandemic and reduced faith in policing resulting from high profile killings of Black Americans by police that motivated Black Lives Matter [e.g., @reny2021].
+
+These changes were shaped by a structural legal context forged in distinctly American gun culture. Self-protection oriented American gun culture is inextricably entwined with a type of legal—and more broadly institutional—cynicism. From this perspectrive, the world is a dangerous place and you must be a self-reliant protector of yourself, your family, and vulnerable others [@carlson2015; @stroud2016]. The NRA and gun manufacturers promote this legal and institutional cynicism—fear of government tyranny—to sell their products [@yamane2022]. Gun carrying as a response to legal cynicism is thus likely a uniquely American phenomenon; there were large reductions in opinions of police in other countries but these countries lack a self-defense oriented gun culture. As Yamane [-@yamane2022, p. 22] has observed: "The U.S. is an outlier in embracing the capacity for legitimate violence by private citizens in the form of widespread firearms ownership and enshrining it in law," [see @carlson2019].
+
+```{tikz fig-cynicism-trust-violence, echo = FALSE, fig.cap = "Direct and indirect effects of legal cynicism that promote potentially-lethal violence"}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none
+    },
+    every edge/.append style = {
+        arrows = ->,
+        draw = black,
+        fill = none
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt
+    }
+}
+\tikz{
+
+   
+    \node[align=center] (lc) at (0,5) {Legal\\cynicism};
+    \node[align=center] (distrust) at (0,1) {Generalized\\distrust};
+    \node[align=center] (carry) at (1,3) {Gun\\carry};
+    \node[align=center] (conflict) at (5.5,3) {Conflict\\situations};
+    \node[align=center] (violence) at (7,5) {Violence};
+    
+    \node[align=center, font=\itshape] (co) at (3.25,4.5) {Perceived\\options};
+    \node[align=center, font=\itshape] (lp) at (2.75,3.25) {Lethality};
+    \node[align=center, font=\itshape] (fear) at (3.25,1.5) {Fear and\\suspicion};
+    \node[align=center, font=\itshape] (emergence) at (7.4,4) {Emergence};
+    
+    \path (lc) edge (carry);
+    \path (distrust) edge (carry);
+    \path (lc) edge (conflict);
+    \path (distrust) edge (conflict);
+    \path (carry) edge (conflict);
+    \path (conflict) edge (violence);
+
+  }
+```
+
+To summarize our argument, @fig-cynicism-trust-violence depicts the direct and indirect pathways by which cynicism promotes serious violence---in particular homicide---by changing the context of the conflict situations such altercations in public places. First, legal cynicism influences what alternatives individuals perceive as viable for solving interpersonal conflicts. Second, legal cynicism in concert with a culture normalizing gun use increases the likelihood that individuals will carry a gun in anticipation of encountering dangerous situations, which increases the lethal potential of those situations [@braga2021] and, obviously, provides using that weapon as a means of resolving the interpersonal conflict. It is also possible that carrying a gun alters what situations individuals select into or perceive to be conflict situations in the first place; as @wilkinson1996 note, "guns may change the contingencies and reactions to provocations and threats, and change strategic thinking about the intentions and actions of the other person in the dispute". The likelihood that serious violence results from the situation is then the product of the interaction between these aggravating factors and the unique elements of each conflict situation.
+
+# Social change and the life course
+
+Based on these evidence, we present a tentative cohort micro-macro model of social change and use it to examine trends in concealed handgun carrying, legal cynicism, and gun violence in the US over the last 30 years. To produce this model, we first present a general model of macro-historical change and the life-course seen in @fig-micro-macro. This micro-macro model [@coleman1990; @matsueda2017] represents in part the classic concerns of research in demography and the life course such as the relationship between historical change and age-graded experiences [@ryder1965; @elder1975; @sampson2026]; sweeping historical changes impact individuals of different ages—and other demographic groupings—differently. This results in differentiation across cohorts in their behavior. These age-graded differences in behavior then produce new social change, which in turn produces new age-graded contexts. However, life course and demographic research on crime and deviance often focuses on the micro-level (individual) outcomes of macro-scale (societal) causes, and when societal (macro-scale) outcomes are considered, the focus is usually on aggregated individual outcomes such as mortality rates. Less often considered is how macro-level events affect crime-relevant social processes to produce emergent (i.e., not simple aggregate) macro-level outcomes. In the present case, we posit that the different macro-social contexts in the early 1990s and 2020-2021 produced similar aggregate levels of gun violence in part through differential activation of age-graded processes of concealed gun carrying.
+
+```{tikz fig-micro-macro, echo = FALSE, fig.cap = "Model of life course processes and macro-historical change"}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none
+    },
+    every edge/.append style = {
+        arrows = ->,
+        draw = black,
+        fill = none
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt
+    }
+}
+\tikz{
+
+    \node[align=center] (socialchange) at (0,3) {Social\\Context};
+    \node[align=center] (contexts) at (1,0) {Age-graded\\contexts};
+    \node[align=center] (behavior) at (6,0) {Situated\\behavior};
+    \node[align=center] (future) at (7,3) {New social\\context};
+    
+    \node[align=center] (path1) at (3.5,3.25) {Historical change};
+    \node[align=center] (path2) at (-0.6,1.5) {Cohort\\differentiation};
+    \node[align=center] (path3) at (7.5,1.5) {Cohort\\dynamics};
+    \node[align=center] (path4) at (3.5,-0.25) {Life course};
+ 
+    \path (socialchange) edge (future);
+    \path (socialchange) edge (contexts);
+    \path (contexts) edge (behavior);
+    \path (behavior) edge (future);
+  }
+```
+
+@fig-two-processes depicts the two structurally similar processes that we tentatively suggest generate aggregate gun violence through individual-level processes of adolescent and adult gun carrying [i.e., @lanfear2024]. We argue that these age-graded processes operated concurrently in both time periods but were differentially activated by different macro-contexts to produce the observed period effects: the adolescent process dominated in the early 1990s, while the adult process dominated in 2020-2021, and in the relative calm (or "uneasy peace") between these periods [@sharkey2018], both processes were suppressed. Additionally, the process of emergence that generates violence—the micro-level outcome—differs between these processes due to age-graded differences in conflict situations. Specifically, while the hazard of violence is much higher for the average youth gun carrier due to the risky situations they encounter (and select into), youth carriers are relatively few in number and age out quickly. In contrast, the lower hazard of violence for adults is overcome by the large number of adult carriers and their persistence in carrying over the life course.
+
+```{tikz fig-two-processes, echo = FALSE, fig.cap = "Adolescent and adult processes"}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.pathreplacing}
+\definecolor{black}{HTML}{000000}
+\tikzset{
+    > = stealth,
+    every node/.append style = {
+        draw = none
+    },
+    every edge/.append style = {
+        arrows = ->,
+        draw = black,
+        fill = none
+    },
+    hidden/.style = {
+        draw = black,
+        shape = circle,
+        inner sep = 1pt
+    }
+}
+\tikz{
+
+   
+    \node (title1) at (3.5,3) {Adolescent Process};
+    \node[align=center] (racesex1) at (0,0) {Race\\Sex};
+    \node[align=center] (instability1) at (2,2) {Local instability\\(Risky situations)};
+    \node[align=center] (fear1) at (2.5,0) {Specific fear\\and cynicism};
+    \node[align=center] (carry1) at (5.5,0) {Youth gun\\carrying};
+    \node[align=center] (violence1) at (6,2) {Increased\\youth violence};
+    
+    % latent -> obs
+       % X->X%
+    \path (racesex1) edge (fear1);
+    \path (instability1) edge (fear1);
+    \path (fear1) edge (carry1);
+    \path (carry1) edge (violence1);
+    \path (instability1) edge (violence1);
+    
+    \node (title2) at (11.5,3) {Adult Process};
+    \node[align=center] (racesex2) at (8,0) {Race\\Sex};
+    \node[align=center] (instability2) at (10,2) {Societal instability\\(Risky world)};
+    \node[align=center] (fear2) at (10.5,0) {Diffuse fear\\and cynicism};
+    \node[align=center] (carry2) at (13.5,0) {Adult gun\\carrying};
+    \node[align=center] (violence2) at (14,2) {Increased\\adult violence};
+    
+    % latent -> obs
+       % X->X%
+    \path (racesex2) edge (fear2);
+    \path (instability2) edge (fear2);
+    \path (fear2) edge (carry2);
+    \path (carry2) edge (violence2);
+    \path (instability2) edge (violence2);
+  }
+```
+
+In the adolescent process, accumulated macrosocial change (e.g., deindustrialization) produced *local* instability: increasing concentrated disadvantage [@wilson1987] and resulting gangs and illicit markets. These fostered specific and concrete fear of violence, legal cynicism, street codes, and offending. Exposure to these conditions and situations is strongly patterned by race and sex. The resulting fear and cynicism increases youth gun carrying (which is always illegal), particularly for young Black and Hispanic males. The increased prevalence of youth gun carrying increases the likelihood that conflict situations will result in a shooting, increasing aggregate gun violence. If this is correct, this violence should be more spatially concentrated, more often occur in conjunction with other offending (e.g., illicit markets), be age-limited for offenders, have victims similar in age (and possibly race) to offenders, and rarely involve legally owned guns—and as a result will be weakly related to policies regulating guns.
+
+In the adult process, sudden macro-social change—especially COVID-19 and the murder of George Floyd following on a multi-year policing crisis linked to Ferguson—produced *societal* instability, which in turn fostered increasing generalized fear and cynicism, including declining trust in police. Exposure to these factors is less conditioned on race and sex---but interpretation and response to these factors is strongly patterned, e.g., Carlson's [-@carlson2015] finding of loss of police legitimacy and resulting racial differentiation in motivations for gun carrying. This fear and cynicism increases adult gun carrying (which is usually but not always legal), resulting in more pervasive adult gun carrying. This subsequently increased the likelihood of conflict situations resulting in shootings, increasing aggregate gun violence. If this is correct, this violence should be less spatially concentrated, less associated with other offending, not be age-limited for offenders, have victims that are less similar to offenders in age (and possibly race), and more often involve legally owned guns—and as a result more strongly related to differences in gun policies.
+
+We summarize the period-specific hypotheses about gun violence from these two processes in @tbl-hypotheses.
+
+| Characteristic               | 1990s        | 2020-2021    |
+|------------------------------|--------------|--------------|
+| Spatial concentration        | Stronger     | Weaker       |
+| Offenders                    | Younger      | Older        |
+| In course of other offending | More often   | Less often   |
+| Victim-offender similarity   | More similar | Less similar |
+| Illegal guns                 | More often   | Less often   |
+| Gun regulation effects       | Weaker       | Stronger     |
+
+: Summary of hypotheses about situational characteristics of firearm violence in each time period {#tbl-hypotheses}
+
+# Discussion
+
+While our framework is still being refined, the next major task is subjecting it to empirical test. This will require marshalling data from disparate sources.
+
+Examining changes in the spatial concentration of firearm violence requires point-level data in the same geographic locations spanning the last 30 years—or, at a minimum, both recent historical peaks of violence. Early suggestive evidence of this nature comes from two longitudinal studies of firearm violence in Boston, MA. @braga2010 found firearm violence was highly and consistently spatially concentrated in Boston microplaces from 1980 through 2008. In contrast, @shareef2025 found the spatial concentration of firearm violence declined by 22% from 2007 through mid-2021, and despite a large increase in shootings in 2020-2021, no corresponding increase in concentration was found; the 2020-2021 spike in firearm violence is spatially dissimilar from the prior high violence period peaking in the early 1990s.
+
+Disaggregated police data may be most useful for examine the offending context, legality of guns, and victim-offender similarity, though suggestive evidence may come from aggregate mortality and morbidity data. For example, recent from CDC firearm homicide victimization data are consistent with our expectations: @jay2025 found firearm homicide victimization increased substantially in 2020 and 2021 at all ages but the proportional increases were largest above age 26 and through age 44 (the maximum age examined) where a near doubling was observed over the prior 10-year average. This is consistent with our expectation of decoupling between offender and victim ages, as the widening of the victimization age distribution is notably broader than the shift in offending shown in @fig-hom-offender. Similar data—and existing research based on these data—are also suitable for determining whether the effectiveness of gun regulations has changed over time.
+
+A key area for future research is examining how broad macrosocial changes are influencing trust in others and cynicism about the law and institutions. We posit a decoupling of legal cynicism and Anderson's [-@anderson1999] institutional alienation from neighborhood conditions such as concentrated disadvantage---a shift from local to societal scale. Importantly, we are not arguing that local processes embedded in disadvantaged contexts that drive adolescent violence have ceased, but rather that these local processes have slowed relative to the adult process related to diffuse threats. That is, while exposure to concentrated disadvantage may be declining, those subject to it—and particularly those involved in the most dangerous contexts—should still display effects of local neighborhood conditions. This also raises a related question: When are formative years for generalized trust and legal cynicism? Keskintürk's [-@keskintürk] finds persistent change in attitudes about policing following the killing of George Floyd mainly occurred for those exposed before their 30s and self-identifying as Democrats or Independents. Will we have a generation carrying forward cynicism about the law, institutions, and society in general? These contextual and age-graded effects of macro-context can be empirically tested by comparing the association between measures of neighborhood conditions and legal cynicism in survey data on cohorts observed across time.
+
+Similar survey data can be used to examine the link between legal cynicism and gun carrying in 1990s and 2020-2021. This requires linking survey data in each time period, whether from one long-running study or, more likely, from different studies. Given age-specific pathways of gun carrying [@lanfear2024], it will be important to observe both youth and adults in each time period.
+
+Large-scale effects of social media on society are a growing area of concern in popular culture and academic research [e.g., @haidt2024]. Social media facilitates the dissemination of information---and misinformation---and resulting political polarization [@tucker2018] and mobilization [@hsiao2018] , including the Black Lives Matter movement. To what degree has this increased legal cynicism or reduced its association with local police behavior? Is this conditional on the level of direct contact individuals have with police? Social media and the internet have also been implicated as causes of declining unstructured socialization among youth in public places and, as a result, juvenile delinquency [@understa2025]. As Osgood [-@osgood2023] demonstrates, the decline in unstructured socialization of high schoolers began after year 2000 but accelerated near 2010; this coincides with the timing of the rapid rightward shift in the homicide offender age distribution, but not with major shifts in the overall rate of homicide. A related question is whether this reduced time in public space and increased time on the internet is causing a decline in the significance of local neighborhood social contexts. Future research should investigate changing neighborhood effects not just across the age of individuals but across cohorts and periods.
+
+A final task is examining hetrogeneity in individual-level processes. For example, it is possible individuals motivated to begin carrying guns due to sudden shocks such as COVID-19 may be more or less likely to engage in gun violence or be persistent in their gun carrying than other gun carriers. Consequently, it may be the case that cessation of concealed carry—whether overall or within specific high-risk groups—is linked to the ongoing decline in homicide since 2023. Survey data with repeated measures of concealed carry may provide suggestive evidence.
+
+# References
+
+::: {#refs}
+:::
+
+# 
