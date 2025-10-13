@@ -1,6 +1,6 @@
 ---
 title: "Seminar 3: Writing a Dissertation"
-description: ""
+description: "Expectations and strategies for the dissertation"
 author: "Kyle Treiber"
 date: "2025-11-03"
 draft: false
@@ -23,3 +23,4 @@ Further reading:
 * Cooper, H., Hedges, L. V., & Valentine, J. C. (eds) (2009) Handbook of Research Synthesis and Meta-analysis, 2nd ed., New York: Russell Sage Foundation.
 Access ebook via iDiscover
 
+* Becker, Howard S. Writing for Social Scientists : How to Start and Finish Your Thesis, Book, or Article / Howard S. Becker ; with a Chapter by Pamela Richards. Third edition. Chicago: The University of Chicago Press, 2020. Print.
