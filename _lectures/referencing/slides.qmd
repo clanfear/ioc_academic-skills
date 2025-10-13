@@ -269,4 +269,7 @@ You can make a lot of modifications within the word processor:
 ## Wrap-up {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 50px" background-position="right 15px bottom 15px"}
 
 * CRM tomorrow
-* Reading for next week
+* Reading for next week:
+   * Sword, H. (2011) Stylish Academic Writing, Cambridge, MA: Harvard University Press.
+      * Read *at least* chapters 1, 3, 5 for Monday
+      * Read 9, 10 and 12 later
