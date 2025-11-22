@@ -2,5 +2,8 @@
    * Browse, see refs, interface
    * Paste a bibliography into a doc
 2. Show them connector
-2. Show them Word doc
+3. Show them new Word doc
+   * Add reference
+   * Create bibliography
+4. 
 3. Show them Quarto doc

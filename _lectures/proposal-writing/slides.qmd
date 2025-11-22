@@ -1,8 +1,8 @@
 ---
 author:
   - name: Charles C. Lanfear
-title: Referencing and Reference Management
-subtitle: An Introduction to Zotero
+title: Writing a research proposal
+subtitle: i.e., convincing people to take a chance on you
 format:
   revealjs:
     theme: assets/ioc.scss
@@ -25,102 +25,586 @@ history: false
 
 
 
-# Referencing
 
 
-## Referencing {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
-
-Handook stuff?
-
-Some personal opinions; when to:
-
-* Ref without comment
-* Ref with comment
-* Discuss at length
-* Quote
-
-## Styles {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
-
-APA
-Harvard
-MHRA
 
 
-# Zotero
+# Writing in general
 
-## Zotero Demo {.dark-slide background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
 
-## Getting Started {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
 
-Visit [Zotero.org](https://www.zotero.org/)
-[Downloads](https://www.zotero.org/download/)
-* Desktop application
-* Zotero Connector
-* Optional [additional plugins](https://www.zotero.org/support/plugins)
+## Target your writing
 
-## Desktop Application {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+&nbsp;
 
-Store metadata on books, articles, book chapters, magazines, newspapers,
-podcasts, videos, reports, lectures, etc.
-● Create notes nested within certain entries (great for reading notes)
-● Tags
-● Sync your library and notes across multiple machines (you need an account)
-● Access your account through the Zotero website
-● Settings for metadata and syncing 
+Professional writing is purposeful **communication** to an audience
 
-## Zotero Connector {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
 
-Once, the plugin is installed, you can easily add items to Zotero.
-● JStor
-● Google Scholar
-● Journal websites
-● Publisher websites
-● Amazon.com
-● ISBN numbers
-● (sometimes) Directly from a PDF
-● News articles 
+::::: {.columns}
 
-Adds a Zotero menu to Google Docs!
+:::: {.column}
 
-## Style Repository {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+::: {.fragment}
 
-[Zotero Style Repository](https://www.zotero.org/styles)
-All the hits — Chicago, MLA, APA, etc. — and much, much more
-● Discipline styles
-● Journal-specific styles
-You can switch a style in “document preferences” (in the word processor)
-● Updates all in-text citations
-● And the bibliography!
+* Know the **purpose**
 
-## Word Plugin {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+   + Argument
+   + Description
+   + Theoretical test
+   + Policy evaluation
 
-https://www.zotero.org/support/word_processor_plugin_usage
+:::
 
-## In-text modifications {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+::::
 
-You can make a lot of modifications within the word processor
-● Multiple items in single citation
-● Editing existing citations
-● Hiding authors
-● Adding page numbers, chapters, tables, figures
-● Adding text within the parentheses (e.g. “see also”)
-● “Refresh” to update modifications you make in the desktop app
+:::: {.column}
 
-## Zotero versus alternatives {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+::: {.fragment}
 
-Comparison chart from UChicago library
-● Zotero is free
-● Allows you to easily pull data on items from your browser
-● Gives you access to thousand of styles
-● It works without an internet connection 
+* Know the **audience**
 
-## Conclusion {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+   + Examiners (essay or thesis)
+   + Academics (journal article)
+   + Policy actors (policy brief)
+   + Lay people (public scholarship)
 
-These are basics, but there’s more!
-● [Groups](https://www.zotero.org/groups/)
-● Exporting your library
-● Integration with Quarto
-   * Need to be in Visual mode!
-● [“Locate”](https://www.zotero.org/support/locate)
-● [More resources](https://www.zotero.org/support/)
-● “Upgrade” your storage to support Zotero
+:::
+
+::::
+
+:::::
+
+&nbsp;
+
+::: {.fragment .center}
+
+*Everything you write should **serve your purpose** and **be understood by your audience***
+
+:::
+
+
+
+## When you write
+
+
+:::: {.columns}
+
+::: {.column}
+
+* **Clarity comes first**
+
+   * *Do not write so you can be understood, but so that so you cannot be misunderstood*
+
+
+:::
+
+::: {.column}
+
+![](img/books_cropped.jpg){width="100%"}
+
+:::
+
+::::
+
+## {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+![](img/ghost_crim.jpg){width="75%"}
+
+![](img/keep-your-secrets-frodo.gif){width="75%"}
+
+
+## When you write
+
+::::: {.columns}
+
+:::: {.column}
+
+* **Clarity comes first**
+
+   * *Do not write so you can be understood, but so that so you cannot be misunderstood*
+
+* **Read** good books on writing &rarr;
+
+* **Read** and emulate good writers
+
+* **Read** your work out loud
+
+   * *Good writing seems natural*
+
+::: {.fragment}
+
+* Have others read your work
+
+   * *When someone says something is confusing, assume they are right*
+
+:::
+
+::::
+
+:::: {.column}
+
+![](img/books_cropped.jpg){width="100%"}
+
+::::
+
+:::::
+
+
+# Proposals
+
+
+## Research proposals {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+![](img/boxes-arrows.svg)
+
+
+
+
+
+::::: {.columns}
+
+:::: {.column}
+
+Proposals are:
+
+* A step in the research process
+* Informed by theory and methods
+
+
+::::
+
+:::: {.column}
+
+::: {.fragment}
+
+Reasons for proposals:
+
+* Institutional approval
+* Grants & scholarships
+* PhD applications
+
+:::
+
+::::
+
+:::::
+
+. . .
+
+::: {.center}
+*Convincing someone it is **worth doing** and **you** can do it*
+:::
+
+## Know your audience  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+Before you start, you need to ask...
+
+::::: {.columns}
+
+:::: {.column}
+
+* What proposals do they accept?
+
+   * *Would my research even be considered?*
+
+
+::: {.fragment}
+
+* Who is going to read the proposal?
+
+   * *Experts in your field—or another?*
+   * *An interdisciplinary committee?*
+   * *Lay people or public officials?*
+
+:::
+
+::::
+
+:::: {.column}
+
+::: {.fragment}
+
+* What are their expectations and requirements?
+
+   * *When is it due?*
+   * *What information do I need to provide?*
+   * *How must it be formatted?*
+   * *Do I need a sponsor or supervisor?*
+
+
+:::
+
+::::
+
+:::::
+
+## Our PhD program  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+![](img/ioc-proposal.PNG)
+
+
+## Seven questions  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+
+
+![Adapted from Denscombe (2012) *Research Proposals: A Practical Guide*](img/denscombe-base.svg)
+
+
+
+
+
+
+## What is it all about?  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+&zwj;**Goals:**
+
+* Hook the reader!
+* Define primary practical or theoretical problem
+* Highlight importance
+
+:::
+
+::: {.column width="60%"}
+
+<br>![](img/denscombe-aims.svg){width="100%"}
+
+:::
+::::
+
+## Motivate the study  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+::: {style="font-size: 90%;"}
+
+> Neighborhood disorder is also
+highly-correlated with crime rates, which has led to a **significant controversy** in the social sciences
+over the proper interpretation of the correlation. Does the correlation reflect a causal relationship, in
+which social and physical disorder increases the likelihood of norm-violations and crime, as broken
+windows theory suggests? Or does the correlation reflect a spurious relationship, in which the
+correlation disappears when the confounding variable, neighborhood collective efficacy, is
+controlled? The answer to this question has **important theoretical and policy implications**. This
+project examines this controversy using mixed methods: field experiments embedded in
+neighborhoods that are diverse on measures from the U.S. Census and the Seattle Neighborhoods
+and Crime Survey.
+
+:::
+
+::: {.aside}
+ Matsueda (2016) *Collective Efficacy and Norm Violation: An Experimental Test *
+:::
+
+
+## What do we already know?  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+**Goals:**
+
+* Demonstrate knowledge
+* Set up questions or "gap"
+* Show relevance and value
+
+**Approach:**
+
+* Describe past findings
+* Compare and contrast
+* Be critical
+
+:::
+
+::: {.column width="60%"}
+<br><br>
+![](img/denscombe-lit.svg){width="100%"}
+
+:::
+
+::::
+
+## Use your lit review to "set yourself up"  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+
+
+> A feature of recent research on broken windows, collective efficacy, and social capital is that it
+uses a variety of research designs, including household surveys within neighborhoods, systematic
+social observation, and field experiments. **Viewed separately, these research designs have specific
+strengths and weaknesses** involving causality, endogeneity, and external validity. By embedding a
+series of experiments within neighborhoods, **we hope to capitalize on the unique strengths of distinct
+methods** and overcome many of their weaknesses.
+
+::: {.aside}
+Source: Matsueda (2016) *Collective Efficacy and Norm Violation: An Experimental Test*
+:::
+
+
+## What do we need to find out?  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+**Goals:**
+
+* Anchor the proposal
+* Make reader hungry for answers
+
+**Approach:**
+
+* State research questions
+   * Usually around 3–8
+* Link back to lit review
+* Be clear and concise
+
+:::
+::: {.column width="60%"}
+
+<br><br>
+![](img/denscombe-questions.svg){width="100%"}
+
+:::
+
+::::
+
+## From a proposal for three papers  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+
+
+::: {style="font-size: 90%;"}
+
+> &zwj;(a) Changing Exposures: How does exposure to guns and gun violence as well as gun use vary throughout childhood, adolescence, and early-to-mid adulthood? How has it changed over the last 25 years? In particular, how do exposures differ by cohort and race?<br>(b) Changing Risk and Protective Factors: To what extent have the main individual, family, and community risk and protective factors of gun violence evolved and changed over the last 25 years?<br>(c) Consequences: What are the long-term consequences of personal victimisation and exposure to neighbourhood gun violence for mental and physical health and criminal involvement, and how do they vary by race?
+
+:::
+
+
+::: {.aside}
+Source: Lanfear (2021) *Racial inequality in exposure to gun violence across 25+ years in urban America*
+:::
+
+
+## How will we get this information?  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+**Goals:**
+
+* Demonstrate you know appropriate methods
+* Convince reader of feasibility
+* Recognize potential challenges and discuss how they will be addressed
+
+**Describe:**
+
+* How you will collect data
+* How much data
+* Specific analysis techniques
+
+:::
+
+::: {.column width="60%"}
+
+<br><br>
+![](img/denscombe-methods.svg){width="100%"}
+
+:::
+
+::::
+
+
+## Specific but with some "wiggle room"  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+> For the first objective, measuring changing exposures, Generalized Linear Mixed Models (GLMM) will be used to estimate growth curves of stability and change in probabilities of reporting four measures of exposure: (1) carrying a concealed firearm, (2) shooting or shooting at someone, (3) being shot or shot at, and (4) seeing or hearing someone else get shot or shot at. Growth curve analyses will also be used to examine neighbourhood exposure to gun violence—defined as the annual rate of shootings in the participant’s neighbourhood from official police records. Analyses will also examine how variation by age, race, ethnicity, and socioeconomic status (SES) in exposure to gun violence interact with historical change.
+
+::: {.aside}
+
+&zwj;Source: Lanfear (2021) *Racial inequality in exposure to gun violence across 25+ years in urban America*
+
+:::
+
+
+## What will it take?  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+:::: {.columns}
+
+::: {.column style="width: 40%; font-size: 90%;"}
+
+**Goal:**
+
+* Convince reader of feasibility
+* Justify funding
+
+**Describe:**
+
+* Resources required
+   * Money
+   * Time
+   * **People!**
+* Realistic timeline
+   * Data collection
+   * Analysis
+   * Writing
+
+:::
+
+
+::: {.column width="60%"}
+
+<br><br>
+![](img/denscombe-resources.svg){width="100%"}
+
+:::
+
+:::::
+
+## A project timeline  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+![](img/timeline.PNG){width="65%" fig-align="center"}
+
+::: {.aside}
+
+&zwj;Source: Lanfear (2019) *Integrating Collective Efficacy and Criminal Opportunity: Disorder, the Built Environment, and Policing*
+
+:::
+
+
+## Is the research ethical and safe?  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+**Describe:**
+
+* Compliance with rules
+* Risk assessment
+* Informed consent
+* Data management
+* Data protection
+
+
+:::
+::: {.column width="60%"}
+
+<br><br>
+![](img/denscombe-ethics.svg){width="100%"}
+
+:::
+::::
+
+## Example  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+
+## What will be the benefits?  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+**Describe:**
+
+* **Dissemination plans**
+   * Clear deliverables
+* Who will benefit and how?
+* Policy / practice relevance
+* Impact on future research
+* Training or professional benefits
+
+:::
+
+::: {.column width="60%"}
+
+<br><br>
+![](img/denscombe-outcomes.svg){width="100%"}
+
+:::
+
+::::
+
+## Outputs!  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+::: {style="font-size: 90%;"}
+
+> The research is intended to produce three **peer-reviewed journal articles**, one focusing on each of the three research questions of the proposed study, targeted at outlets such as *Proceedings of the National Academy of Sciences*, *Criminology*, and *The Lancet*. Findings will also be disseminated in accessible **briefs for policymakers and practitioners**, which the lead applicant has experience preparing, as well as **op-eds** and **blog posts** such as *The Conversation*. Finally, the data will be archived in a **public repository**, and code used to prepare the data and conduct analyses will be made publicly available on the applicant’s GitHub site. This will ensure research transparency and facilitate replication and extension of the research products by other researchers.
+
+:::
+
+::: {.aside}
+&zwj;Source: Lanfear (2021) *Racial inequality in exposure to gun violence across 25+ years in urban America*
+:::
+
+
+
+## Dissemination  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+Example dissemination activities:
+
+* Internal seminars
+* Regular reporting to stakeholders (e.g., health service, industrial partner)
+* Publications (e.g., journal articles, reviews, book chapters)
+* Conference presentations
+* Outreach and public engagement
+
+&nbsp;
+
+::: {.center}
+*Every audience will weight these differently!*
+:::
+
+# Activity
+
+## Read and consider  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+:::: {.columns}
+
+::: {.column width="40%"}
+* Is anything...
+   * Unclear?
+   * Missing?
+   * Unconvincing?
+* What if the audience were...
+   * Lay people?
+   * Government?
+   * PhD admissions?
+
+:::
+
+::: {.column width="60%"}
+
+<br><br>
+![:width 100%](img/denscombe-base.svg){width="100%"}
+
+:::
+
+::::
+
+
+# Wrap-up
+
+## Wrap-Up  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+* Write clearly
+* Know the purpose
+* Know the audience
+* Make sure key questions are answered
