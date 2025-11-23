@@ -264,7 +264,9 @@ Before you start, you need to ask...
 
 ::: {.column width="40%"}
 
-&zwj;**Goals:**
+&nbsp;
+
+**Goals:**
 
 * Hook the reader!
 * Define primary practical or theoretical problem
@@ -489,6 +491,8 @@ Source: Lanfear (2021) *Racial inequality in exposure to gun violence across 25+
 
 ::: {.column width="40%"}
 
+&nbsp;
+
 **Describe:**
 
 * Compliance with rules
@@ -507,14 +511,31 @@ Source: Lanfear (2021) *Racial inequality in exposure to gun violence across 25+
 :::
 ::::
 
-## Example  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+## Compliance and experience  {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
 
+> The project has already undergone an **extensive ethical review** within the University of Cambridge, and fieldwork will be conducted in line with the University’s **risk-assessment policies**. The PI’s field experience enables her to manage the ethical, practical, and emotional complexities of this research, seeking assistance and consultation from peers, specialists, and the University as and if new scenarios or complications arise. The research team has previously collaborated, including on pilot interviews with defectors. Direct prior experience is crucial given the sensitivity and complexity of this group. In addition, having already worked together reduces the risk of miscommunication between researchers and has allowed the team to refine procedures and safety protocols.
+
+::: {.aside}
+Hauser (2025) *How exit sanctions shape migration markets: The case of North Korea*
+:::
+
+## Consent and risk {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+> The interview guide is designed to avoid any risk of **self-incrimination**. Participants are explicitly advised at the outset not to disclose personal details that could identify them or to provide **identifiable information** about others. Before each interview, participants will receive clear information about the project, its aims, funding sources, and the intended use of the collected material. They will also be informed of their **right to withdraw** from the study or pause the interview at any point, without needing to provide a reason.
+
+::: {.aside}
+Hauser (2025) *How exit sanctions shape migration markets: The case of North Korea*
+:::
 
 ## What will be the benefits?  {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
 
 :::: {.columns}
 
 ::: {.column width="40%"}
+
+&nbsp;
 
 **Describe:**
 
@@ -577,6 +598,9 @@ Example dissemination activities:
 :::: {.columns}
 
 ::: {.column width="40%"}
+
+&nbsp;
+
 * Is anything...
    * Unclear?
    * Missing?
