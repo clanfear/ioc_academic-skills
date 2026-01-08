@@ -127,9 +127,13 @@ body strong {
  background-image: "img/logo-light.svg" !important;
 }
 
+/*---
 .dark-slide {
   background-color: $color-bg-code !important;
 }
+---*/
+
+
 .dark-slide body {
   color: $color-text-code !important;
   background-color: $color-bg-code !important;

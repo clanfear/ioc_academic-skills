@@ -1,0 +1,23 @@
+\documentclass[
+%% TIKZ_CLASSOPTION %%
+tikz
+]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{matrix}
+%% EXTRA_TIKZ_PREAMBLE_CODE %%
+\begin{document}
+%% TIKZ_CODE %%
+
+\usetikzlibrary{ext.paths.arcto}
+\def\rr{2}  % define a radius
+\begin{tikzpicture}
+    % ~~~ text ~~~~~~~~~~~~~~~~~
+    \node (A) at (  90:\rr) {single};
+    \node (B) at (- 30:\rr) {relationship};
+    \node (C) at (-150:\rr) {self-sabotage};
+    % ~~~ arcs ~~~~~~~~~~~~~~
+    \draw[->] (A.east)  arc to[radius=\rr,clockwise] (B.north);
+    \draw[->] (C.130)   arc to[radius=\rr,clockwise] (A.west);
+    \draw[->] (B.220)   arc to[radius=\rr,clockwise] (C.-70);
+\end{tikzpicture}
+\end{document}

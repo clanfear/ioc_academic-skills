@@ -1,0 +1,18 @@
+\documentclass[
+%% TIKZ_CLASSOPTION %%
+tikz
+]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{matrix}
+%% EXTRA_TIKZ_PREAMBLE_CODE %%
+\begin{document}
+%% TIKZ_CODE %%
+\usetikzlibrary {arrows.meta,graphs,graphdrawing} \usegdlibrary {circular}
+\tikz[>={Stealth[round,sep]}]
+  \graph [simple necklace layout, grow'=down, node sep=1em,
+          nodes={draw,circle}, math nodes]
+  {
+    Draft -> Rehearse -> Revise -> Present ->
+    Reflect -> Draft
+  };
+\end{document}

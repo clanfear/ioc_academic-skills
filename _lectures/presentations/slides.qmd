@@ -1,8 +1,8 @@
 ---
 author:
   - name: Charles C. Lanfear
-title: Referencing and Reference Management
-subtitle: An Introduction to Zotero
+title: Presentations
+subtitle: Don't just read the paper
 format:
   revealjs:
     theme: assets/ioc.scss
@@ -22,105 +22,516 @@ mouse-wheel: true
 history: false
 ---
 
+```{r setup}
+# Empty chunk
+```
+
+## Lent presentations
+
+Overview of the Lent presentations
+
+## Sell people on talks?
+
+## Target your presentation
+
+&nbsp;
+
+Like writing, presentations are purposeful **communication** to an audience
+
+
+::::: {.columns}
+
+:::: {.column}
+
+::: {.fragment}
+
+* Know the **purpose**
+
+   + Communicating findings
+   + Making an argument
+   + Getting a job
+
+:::
+
+::::
+
+:::: {.column}
+
+::: {.fragment}
+
+* Know the **audience**
+
+   + Academics (conferences)
+   + Policy actors (policy meetings)
+   + Lay people (public meetings)
+
+:::
+
+::::
+
+:::::
+
+&nbsp;
+
+::: {.fragment .center}
+
+*Everything you present should **serve your purpose** and **your audience***
+
+:::
+
+## Good presentations
+
+&nbsp;
+
+After one, your audience...
+
+* understands what was done
+* remembers the key points
+* feels their time was well spent
+
+. . .
+
+
+::: {.center}
+
+*Good presentations rarely closely follow a paper...*
+
+:::
+
+. . .
+
+::: {.center}
+
+*... but a good presentation is a great foundation for a paper*
+
+:::
+
+# Structure
+
+
+## Classic structure
+
+* Say what you’re going to say
+   * Motivate
+   * Outline
+* Say it
+   * Provide necessary background
+   * Analysis
+* Say what you said
+   * Repeat key points
+   * Provide a resolution
+
+. . .
+
+::: {.center}
+*This is reliable and safe but an be boring and inefficient*
+:::
+
+
+## Anything else
+
+People like a bit of drama
+
+::: {.center}
+*This is usually more engaging but requires more thought*
+:::
 
 
 
-# Referencing
 
 
-## Referencing {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
 
-Handook stuff?
+## Example
 
-Some personal opinions; when to:
+How would you present this?
 
-* Ref without comment
-* Ref with comment
-* Discuss at length
-* Quote
+# Style
 
-## Styles {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+## Presentation style
 
-APA
-Harvard
-MHRA
+:::: {.columns}
+
+::: {.column}
+**Be yourself**
+
+* Humor
+   * Can win audiences
+   * Not always appropriate
+* Audience engagement
+   * High risk/reward
+
+:::
+
+::: {.column}
+**Or don't**
+
+* Play a role
+* Use a script
+
+:::
+
+::::
+
+## Slides
+
+A little attention to slides goes a long way
 
 
-# Zotero
 
-## Zotero Demo {.dark-slide background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+## 
 
-## Getting Started {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+* Humor
+   * If you're funny, can keep people engaged
+   * But risk not being taken seriously and hard to calibrate for many audiences and purposes
+* Engagement
+   * Can keep people more interested
+   * Hard to predict and control
+* Language
+   * Even simpler/clearer than paper
+   * Use jargon only when everyone will understand or you can define it
+* Script or no script
 
-Visit [Zotero.org](https://www.zotero.org/)
-[Downloads](https://www.zotero.org/download/)
-* Desktop application
-* Zotero Connector
-* Optional [additional plugins](https://www.zotero.org/support/plugins)
 
-## Desktop Application {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+## Preparation
 
-Store metadata on books, articles, book chapters, magazines, newspapers,
-podcasts, videos, reports, lectures, etc.
-● Create notes nested within certain entries (great for reading notes)
-● Tags
-● Sync your library and notes across multiple machines (you need an account)
-● Access your account through the Zotero website
-● Settings for metadata and syncing 
+* Whether scripted or not, run through multiple times and time it
+* You are a performer
 
-## Zotero Connector {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
 
-Once, the plugin is installed, you can easily add items to Zotero.
-● JStor
-● Google Scholar
-● Journal websites
-● Publisher websites
-● Amazon.com
-● ISBN numbers
-● (sometimes) Directly from a PDF
-● News articles 
+## Iterating
 
-Adds a Zotero menu to Google Docs!
+::::: {.columns}
 
-## Style Repository {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+:::: {.column width="40%"}
 
-[Zotero Style Repository](https://www.zotero.org/styles)
-All the hits — Chicago, MLA, APA, etc. — and much, much more
-● Discipline styles
-● Journal-specific styles
-You can switch a style in “document preferences” (in the word processor)
-● Updates all in-text citations
-● And the bibliography!
+* Stuff
 
-## Word Plugin {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+::::
 
-https://www.zotero.org/support/word_processor_plugin_usage
+:::: {.column width="60%"}
 
-## In-text modifications {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+::: {style='width="100%"'}
 
-You can make a lot of modifications within the word processor
-● Multiple items in single citation
-● Editing existing citations
-● Hiding authors
-● Adding page numbers, chapters, tables, figures
-● Adding text within the parentheses (e.g. “see also”)
-● “Refresh” to update modifications you make in the desktop app
+```{tikz, fig.ext = 'svg', dev="svglite", cache=TRUE}
+\usetikzlibrary{ext.paths.arcto}
+\def\rr{1.8}  % define a radius
+\def\rna{90}
+\def\rnb{18}
+\def\rnc{306}
+\def\rnd{234}
+\def\rne{162}
+\definecolor{darkgrayish}{HTML}{232830}
+\definecolor{accent}{HTML}{DD3025}
+\begin{tikzpicture}[every node/.style={text=darkgrayish}, every path/.style={draw=darkgrayish}]
+    % ~~~ text ~~~~~~~~~~~~~~~~~
+    \node (A) at (\rna:\rr) {Draft};
+    \node (B) at (\rnb:\rr) {Rehearse};
+    \node (C) at (\rnc:\rr) {Revise};
+    \node (D) at (\rnd:\rr) {Presen\!t};
+    \node (E) at (\rne:\rr) {Reflect};
+    % ~~~ arcs ~~~~~~~~~~~~~~
+    \draw[->] (\rna-13:\rr)  arc to[radius=\rr,clockwise] (\rnb+5:\rr);
+    \draw[->] (\rnb-6:\rr)  arc to[radius=\rr,clockwise] (\rnc+7:\rr);
+    \draw[->] (\rnc-12:\rr)  arc to[radius=\rr,clockwise] (\rnd+12:\rr);
+    \draw[->] (\rnd-6:\rr)   arc to[radius=\rr,clockwise] (\rne+6:\rr);
+    \draw[->] (\rne-6:\rr)   arc to[radius=\rr,clockwise] (\rna+14:\rr);
+\end{tikzpicture}
+```
 
-## Zotero versus alternatives {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+:::
 
-Comparison chart from UChicago library
-● Zotero is free
-● Allows you to easily pull data on items from your browser
-● Gives you access to thousand of styles
-● It works without an internet connection 
+::::
 
-## Conclusion {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+:::::
 
-These are basics, but there’s more!
-● [Groups](https://www.zotero.org/groups/)
-● Exporting your library
-● Integration with Quarto
-   * Need to be in Visual mode!
-● [“Locate”](https://www.zotero.org/support/locate)
-● [More resources](https://www.zotero.org/support/)
-● “Upgrade” your storage to support Zotero
+## Draft
+
+::::: {.columns}
+
+:::: {.column width="40%"}
+
+* Less is more
+   * Key points
+* Talks aren't papers
+
+::::
+
+:::: {.column width="60%"}
+
+::: {style='width="100%"'}
+
+```{tikz, fig.ext = 'svg', dev="svglite", cache=TRUE}
+\usetikzlibrary{ext.paths.arcto}
+\def\rr{1.8}  % define a radius
+\def\rna{90}
+\def\rnb{18}
+\def\rnc{306}
+\def\rnd{234}
+\def\rne{162}
+\definecolor{darkgrayish}{HTML}{232830}
+\definecolor{accent}{HTML}{DD3025}
+\begin{tikzpicture}[every node/.style={text=darkgrayish}, every path/.style={draw=darkgrayish}]
+    % ~~~ text ~~~~~~~~~~~~~~~~~
+    \node[text=accent] (A) at (\rna:\rr) {Draft};
+    \node (B) at (\rnb:\rr) {Rehearse};
+    \node (C) at (\rnc:\rr) {Revise};
+    \node (D) at (\rnd:\rr) {Presen\!t};
+    \node (E) at (\rne:\rr) {Reflect};
+    % ~~~ arcs ~~~~~~~~~~~~~~
+    \draw[->] (\rna-13:\rr)  arc to[radius=\rr,clockwise] (\rnb+5:\rr);
+    \draw[->] (\rnb-6:\rr)  arc to[radius=\rr,clockwise] (\rnc+7:\rr);
+    \draw[->] (\rnc-12:\rr)  arc to[radius=\rr,clockwise] (\rnd+12:\rr);
+    \draw[->] (\rnd-6:\rr)   arc to[radius=\rr,clockwise] (\rne+6:\rr);
+    \draw[->] (\rne-6:\rr)   arc to[radius=\rr,clockwise] (\rna+14:\rr);
+\end{tikzpicture}
+```
+
+:::
+
+::::
+
+:::::
+
+## Content
+
+* Calibrate to time
+
+* Introduction
+   * Minimal logistics, e.g., who you are
+   * Hook immediately
+
+* Time is precious
+   * Trim all fat
+   * Q&A exists for a reason
+
+* Don't fight your slides
+   * Minimize words
+      * Key points
+      * Cues for you
+   * Interact with images
+
+## Visuals
+
+* Don't display anything you don't want them to look at
+* Visuals will compete for attention
+* Either extremely simple or you walk people through it
+
+## Rehearse
+
+::::: {.columns}
+
+:::: {.column width="40%"}
+
+* Keep time
+* Make note of:
+
+   * Forgotten points
+   * Awkwardness
+   * Clarity issues
+
+::::
+
+:::: {.column width="60%"}
+
+::: {style='width="100%"'}
+
+```{tikz, fig.ext = 'svg', dev="svglite", cache=TRUE}
+\usetikzlibrary{ext.paths.arcto}
+\def\rr{1.8}  % define a radius
+\def\rna{90}
+\def\rnb{18}
+\def\rnc{306}
+\def\rnd{234}
+\def\rne{162}
+\definecolor{darkgrayish}{HTML}{232830}
+\definecolor{accent}{HTML}{DD3025}
+\begin{tikzpicture}[every node/.style={text=darkgrayish}, every path/.style={draw=darkgrayish}]
+    % ~~~ text ~~~~~~~~~~~~~~~~~
+    \node (A) at (\rna:\rr) {Draft};
+    \node[text=accent] (B) at (\rnb:\rr) {Rehearse};
+    \node (C) at (\rnc:\rr) {Revise};
+    \node (D) at (\rnd:\rr) {Presen\!t};
+    \node (E) at (\rne:\rr) {Reflect};
+    % ~~~ arcs ~~~~~~~~~~~~~~
+    \draw[->] (\rna-13:\rr)  arc to[radius=\rr,clockwise] (\rnb+5:\rr);
+    \draw[->] (\rnb-6:\rr)  arc to[radius=\rr,clockwise] (\rnc+7:\rr);
+    \draw[->] (\rnc-12:\rr)  arc to[radius=\rr,clockwise] (\rnd+12:\rr);
+    \draw[->] (\rnd-6:\rr)   arc to[radius=\rr,clockwise] (\rne+6:\rr);
+    \draw[->] (\rne-6:\rr)   arc to[radius=\rr,clockwise] (\rna+14:\rr);
+\end{tikzpicture}
+```
+
+:::
+
+::::
+
+:::::
+
+## Revise
+
+::::: {.columns}
+
+:::: {.column width="40%"}
+
+* Add necessary cues
+* Condense
+
+::::
+
+:::: {.column width="60%"}
+
+::: {style='width="100%"'}
+
+```{tikz, fig.ext = 'svg', dev="svglite", cache=TRUE}
+\usetikzlibrary{ext.paths.arcto}
+\def\rr{1.8}  % define a radius
+\def\rna{90}
+\def\rnb{18}
+\def\rnc{306}
+\def\rnd{234}
+\def\rne{162}
+\definecolor{darkgrayish}{HTML}{232830}
+\definecolor{accent}{HTML}{DD3025}
+\begin{tikzpicture}[every node/.style={text=darkgrayish}, every path/.style={draw=darkgrayish}]
+    % ~~~ text ~~~~~~~~~~~~~~~~~
+    \node (A) at (\rna:\rr) {Draft};
+    \node (B) at (\rnb:\rr) {Rehearse};
+    \node[text=accent] (C) at (\rnc:\rr) {Revise};
+    \node (D) at (\rnd:\rr) {Presen\!t};
+    \node (E) at (\rne:\rr) {Reflect};
+    % ~~~ arcs ~~~~~~~~~~~~~~
+    \draw[->] (\rna-13:\rr)  arc to[radius=\rr,clockwise] (\rnb+5:\rr);
+    \draw[->] (\rnb-6:\rr)  arc to[radius=\rr,clockwise] (\rnc+7:\rr);
+    \draw[->, draw=accent] (C.90)  arc to[radius=\rr,clockwise] (B.240);
+    \draw[->] (\rnc-12:\rr)  arc to[radius=\rr,clockwise] (\rnd+12:\rr);
+    \draw[->] (\rnd-6:\rr)   arc to[radius=\rr,clockwise] (\rne+6:\rr);
+    \draw[->] (\rne-6:\rr)   arc to[radius=\rr,clockwise] (\rna+14:\rr);
+\end{tikzpicture}
+```
+
+:::
+
+::::
+
+:::::
+
+## Present
+
+::::: {.columns}
+
+:::: {.column width="40%"}
+
+* Slow down
+* Your nervousness rarely shows
+* Look at audience
+* Q&A:
+   * Pay attention, breathe, answer concisely
+
+::::
+
+:::: {.column width="60%"}
+
+::: {style='width="100%"'}
+
+```{tikz, fig.ext = 'svg', dev="svglite", cache=TRUE}
+\usetikzlibrary{ext.paths.arcto}
+\def\rr{1.8}  % define a radius
+\def\rna{90}
+\def\rnb{18}
+\def\rnc{306}
+\def\rnd{234}
+\def\rne{162}
+\definecolor{darkgrayish}{HTML}{232830}
+\definecolor{accent}{HTML}{DD3025}
+\begin{tikzpicture}[every node/.style={text=darkgrayish}, every path/.style={draw=darkgrayish}]
+    % ~~~ text ~~~~~~~~~~~~~~~~~
+    \node (A) at (\rna:\rr) {Draft};
+    \node (B) at (\rnb:\rr) {Rehearse};
+    \node (C) at (\rnc:\rr) {Revise};
+    \node[text=accent] (D) at (\rnd:\rr) {Presen\!t};
+    \node (E) at (\rne:\rr) {Reflect};
+    % ~~~ arcs ~~~~~~~~~~~~~~
+    \draw[->] (\rna-13:\rr)  arc to[radius=\rr,clockwise] (\rnb+5:\rr);
+    \draw[->] (\rnb-6:\rr)  arc to[radius=\rr,clockwise] (\rnc+7:\rr);
+    \draw[->] (\rnc-12:\rr)  arc to[radius=\rr,clockwise] (\rnd+12:\rr);
+    \draw[->] (\rnd-6:\rr)   arc to[radius=\rr,clockwise] (\rne+6:\rr);
+    \draw[->] (\rne-6:\rr)   arc to[radius=\rr,clockwise] (\rna+14:\rr);
+\end{tikzpicture}
+```
+
+:::
+
+::::
+
+:::::
+
+
+## Reflect
+
+::::: {.columns}
+
+:::: {.column width="40%"}
+
+* What worked?
+* What didn't?
+* *Was it that bad?*
+
+
+::::
+
+:::: {.column width="60%"}
+
+::: {style='width="100%"'}
+
+```{tikz, fig.ext = 'svg', dev="svglite", cache=TRUE}
+\usetikzlibrary{ext.paths.arcto}
+\def\rr{1.8}  % define a radius
+\def\rna{90}
+\def\rnb{18}
+\def\rnc{306}
+\def\rnd{234}
+\def\rne{162}
+\definecolor{darkgrayish}{HTML}{232830}
+\definecolor{accent}{HTML}{DD3025}
+\begin{tikzpicture}[every node/.style={text=darkgrayish}, every path/.style={draw=darkgrayish}]
+    % ~~~ text ~~~~~~~~~~~~~~~~~
+    \node (A) at (\rna:\rr) {Draft};
+    \node (B) at (\rnb:\rr) {Rehearse};
+    \node (C) at (\rnc:\rr) {Revise};
+    \node (D) at (\rnd:\rr) {Presen\!t};
+    \node[text=accent] (E) at (\rne:\rr) {Reflect};
+    % ~~~ arcs ~~~~~~~~~~~~~~
+    \draw[->] (\rna-13:\rr)  arc to[radius=\rr,clockwise] (\rnb+5:\rr);
+    \draw[->] (\rnb-6:\rr)  arc to[radius=\rr,clockwise] (\rnc+7:\rr);
+    \draw[->] (\rnc-12:\rr)  arc to[radius=\rr,clockwise] (\rnd+12:\rr);
+    \draw[->] (\rnd-6:\rr)   arc to[radius=\rr,clockwise] (\rne+6:\rr);
+    \draw[->] (\rne-6:\rr)   arc to[radius=\rr,clockwise] (\rna+14:\rr);
+\end{tikzpicture}
+```
+
+:::
+
+::::
+
+:::::
+
+## Some example talks {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+* [Life-course processes as cause and effect of macro-level changes in gun violence. *European Society of Criminology Annual Meeting 2025*](https://clanfear.github.io/ESC_2025/slides.html)
+   * A dense 12 minute theoretical talk
+
+* [Exposure to gun violence and gun carrying from childhood to age 40 over a 25-year era of change *NCGVR Webinar Series 2025*](https://www.ncgvr.org/events/gun-violence-prevention-webinar-series/community-firearm-violence-exposure-weapon-carrying.html)
+   * A 10 minute empirical talk---read from a script!
+
+* [The promise and perils of the sharing economy: The impact of Airbnb lettings on crime. *University of Cambridge Alumni Festival 2025*](https://clanfear.github.io/alumni-festival_2025-09-27/slides.html)
+   * A 45-minute empirical talk for a diverse audience
+
+* [Reassessing 'the effect ofthe Seattle police-free CHOP Zone on crime'. *European Society of Criminology Annual Meeting 2024*](https://clanfear.github.io/ESC_2024/piza-connealy_comment/slides.html)
+   * A 12-minute critique of a published paper
+
+# Section
+
+## Dark slide {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
+## Normal slide {background-image="img/logo-dark.svg" background-size="auto 60px" background-position="right 15px bottom 15px"}
+
