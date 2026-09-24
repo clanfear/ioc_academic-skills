@@ -4,6 +4,9 @@ project:
     - delete_index.R
   post-render:
     - create_redirect.R
+  render:
+    - "*.qmd"
+    - "!presentations/"
 
 website:
   title: "Academic Skills Workshops"

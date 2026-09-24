@@ -163,6 +163,44 @@ Supporting the same claim:<br>
 *Regardless of what you use, don't do them manually*
 :::
 
+## Some source recommendations
+
+:::: {.columns}
+
+::: {.column}
+
+**Journals**
+
+* Annual Reviews
+* Flagship general journals, e.g.:
+   * Criminology, BJC
+   * American Sociological Review
+* Major subject journals, e.g.:
+   * Journal of Quantitative Criminology
+   * Theoretical Criminology
+* Avoid:
+   * Predatory, e.g., Frontiers, MDPI
+   * Minor journals
+
+:::
+
+::: {.column}
+
+**Books**
+
+* Major presses
+   * Oxford/Cambridge
+   * Ivy League, Chicago, California
+   * Routledge, Sage, CRC
+* Avoid:
+   * Other edited volumes
+   * Textbooks *except for methods*
+
+:::
+
+::::
+
+
 ## Questions? {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 50px" background-position="right 15px bottom 15px"}
 
 

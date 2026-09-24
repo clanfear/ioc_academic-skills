@@ -46,5 +46,14 @@
   },
   "posts/referencing/referencing.qmd": {
     "referencing.html": "9a3ac19c"
+  },
+  "_lectures/referencing/slides.qmd": {
+    "slides.html": "cfce3c0a"
+  },
+  "_lectures/proposal-writing/slides.qmd": {
+    "slides.html": "a51c7a22"
+  },
+  "_lectures/test/test.qmd": {
+    "test.html": "42f95804"
   }
 }
