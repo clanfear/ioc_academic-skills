@@ -2,10 +2,10 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/ethics/ethics.html",
       "/posts/referencing/referencing.html",
       "/posts/essay-writing/essay-writing.html",
       "/posts/dissertation-writing/dissertation-writing.html",
-      "/posts/ethics/ethics.html",
       "/posts/proposal-writing/proposal-writing.html"
     ]
   }

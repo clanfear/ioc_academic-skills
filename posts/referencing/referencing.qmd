@@ -2,7 +2,7 @@
 title: "Seminar 1: Referencing and Reference Management"
 description: "An Introduction to Zotero"
 author: "Charles Lanfear"
-date: "2025-10-13"
+date: "2026-10-12"
 draft: false
 ---
 

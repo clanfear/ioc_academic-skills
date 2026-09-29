@@ -2,7 +2,7 @@
 title: "Seminar 2: Essay Writing"
 description: ""
 author: "Daria Przybylska"
-date: "2025-10-20"
+date: "2026-10-26"
 draft: false
 ---
 
