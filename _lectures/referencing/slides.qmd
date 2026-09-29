@@ -1,11 +1,11 @@
 ---
 author:
   - name: Charles C. Lanfear
-title: Referencing and Reference Management
+title: Referencing and reference management
 subtitle: With an introduction to Zotero
 format:
   revealjs:
-    theme: assets/ioc.scss
+    theme: ../assets/ioc.scss
     incremental: false
     self-contained: false
     width: 1200
@@ -16,7 +16,7 @@ format:
       data-background-position: bottom
       data-background-size: contain
 filters: 
-  - assets/invert-h1.lua
+  - ../assets/invert-h1.lua
 editor: source
 mouse-wheel: true
 history: false
@@ -163,6 +163,23 @@ Supporting the same claim:<br>
 *Regardless of what you use, don't do them manually*
 :::
 
+
+## But don't use AI for it {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 50px" background-position="right 15px bottom 15px"}
+
+&nbsp;
+
+&nbsp;
+
+::: {.center}
+
+It goes wrong *constantly*...
+
+&nbsp;
+
+... and hallucinations constitute misrepresentation, i.e., **misconduct**
+
+:::
+
 ## Some source recommendations
 
 :::: {.columns}
@@ -307,7 +324,7 @@ You can make a lot of modifications within the word processor:
 ## Wrap-up {.dark-slide background-color="#133844" background-image="img/logo-light.svg" background-size="auto 50px" background-position="right 15px bottom 15px"}
 
 * CRM tomorrow
-* Reading for next week:
+* Reading for next meeting in **two weeks**:
    * Sword, H. (2011) Stylish Academic Writing, Cambridge, MA: Harvard University Press.
-      * Read *at least* chapters 1, 3, 5 for Monday
+      * Read *at least* chapters 1, 3, 5
       * Read 9, 10 and 12 *when you can*

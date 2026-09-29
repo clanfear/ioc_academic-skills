@@ -1,5 +1,8 @@
 {
   "test/test.qmd": {
     "test.html": "97b7622f"
+  },
+  "referencing/slides.qmd": {
+    "slides.html": "0fcedbaa"
   }
 }
