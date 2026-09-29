@@ -1,5 +1,5 @@
 ---
-title: "Seminar 3: Writing a Dissertation"
+title: "Seminar 4: Writing a Dissertation"
 description: "Expectations and strategies for the dissertation"
 author: "Andrzej Uhl"
 date: "2026-11-09"

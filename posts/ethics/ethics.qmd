@@ -1,5 +1,5 @@
 ---
-title: "Seminar 4: Ethical dimensions of research in criminology"
+title: "Seminar 3: Ethical dimensions of research in criminology"
 description: ""
 author: "Loraine Gelsthorpe"
 date: "2026-10-28"
